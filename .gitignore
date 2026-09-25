@@ -1,0 +1,16 @@
+# Certificados digitais e chaves - NUNCA versionar
+*.pfx
+*.p12
+*.pem
+*.key
+
+# Documentos de clientes ficam fora do GitHub (LGPD).
+# Só a estrutura (README.md) de CLIENTES é versionada.
+CLIENTES/**
+!CLIENTES/**/
+!CLIENTES/**/README.md
+
+# Temporários do Office e sistema
+~$*
+.DS_Store
+Thumbs.db
