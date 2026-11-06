@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guia Reforma Tributária</title>
+<style>
+:root{--ink:#1d2433;--muted:#5b6475;--line:#d9dee7;--bg:#ffffff;--soft:#f4f6fa;
+--blue:#1f5fa8;--blue-s:#e6eef8;--green:#2e7d4f;--green-s:#e5f3eb;--orange:#c46a12;--orange-s:#fbefe1;
+--red:#b3261e;--red-s:#fbe7e6;--purple:#6a3fa0;--purple-s:#efe8f8;--gray:#8a93a3;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:11pt/1.5 "Segoe UI",Arial,Helvetica,sans-serif}
+.page{max-width:190mm;margin:0 auto;padding:6mm 0;page-break-after:always}
+.page:last-child{page-break-after:auto}
+h1{font-size:24pt;margin:0 0 4mm;color:var(--blue);line-height:1.15}
+h2{font-size:16pt;color:var(--blue);border-bottom:3px solid var(--blue);padding-bottom:2mm;margin:0 0 4mm}
+h3{font-size:12.5pt;margin:5mm 0 2mm}
+p{margin:0 0 3mm}
+small,.muted{color:var(--muted)}
+.chap{display:inline-block;background:var(--blue);color:#fff;font-weight:700;font-size:9pt;padding:1mm 3mm;border-radius:3mm;margin-bottom:2mm;letter-spacing:.5px}
+.box{border:1px solid var(--line);border-left:6px solid var(--blue);background:var(--blue-s);padding:3mm 4mm;border-radius:2mm;margin:3mm 0;break-inside:avoid}
+.box.g{border-left-color:var(--green);background:var(--green-s)}
+.box.o{border-left-color:var(--orange);background:var(--orange-s)}
+.box.r{border-left-color:var(--red);background:var(--red-s)}
+.box.p{border-left-color:var(--purple);background:var(--purple-s)}
+.box b.t{display:block;margin-bottom:1mm}
+ul{margin:0 0 3mm;padding-left:5mm} li{margin-bottom:1mm}
+table{width:100%;border-collapse:collapse;margin:2mm 0 4mm;font-size:10pt;break-inside:avoid}
+th,td{border:1px solid var(--line);padding:1.6mm 2mm;text-align:left;vertical-align:top}
+th{background:var(--soft)}
+td.n,th.n{text-align:right;white-space:nowrap}
+tr.tot td{font-weight:700;background:var(--soft)}
+.cover{display:flex;flex-direction:column;justify-content:center;min-height:250mm}
+.cover .band{background:var(--blue);color:#fff;padding:10mm;border-radius:4mm}
+.cover .band h1{color:#fff;font-size:28pt}
+.cover .band p{font-size:13pt;opacity:.95}
+.toc li{margin-bottom:2mm}
+/* timeline */
+.tl{display:grid;grid-template-columns:repeat(5,1fr);gap:2mm;margin:3mm 0 4mm;break-inside:avoid}
+.tl div{border-radius:2mm;padding:2.5mm;font-size:9.3pt;line-height:1.35}
+.tl b{display:block;font-size:12pt;margin-bottom:1mm}
+.y26{background:var(--soft);border:1px solid var(--gray)}
+.y27{background:var(--green-s);border:1px solid var(--green)}
+.y29{background:var(--orange-s);border:1px solid var(--orange)}
+.y33{background:var(--purple-s);border:1px solid var(--purple)}
+.now{outline:3px solid var(--red)}
+/* stacked bars */
+.bars{margin:3mm 0 4mm;break-inside:avoid}
+.bar-row{display:flex;align-items:center;margin-bottom:2.5mm}
+.bar-row .lab{width:24mm;font-weight:700;font-size:10pt}
+.bar{flex:1;display:flex;height:11mm;border-radius:1.5mm;overflow:hidden;border:1px solid var(--line)}
+.bar span{display:flex;align-items:center;justify-content:center;font-size:7.6pt;color:#fff;font-weight:700;text-align:center;line-height:1.1;overflow:hidden}
+.c-ir{background:#55607a}.c-cs{background:#7a849a}.c-pc{background:#9a6b2f}.c-cpp{background:#3c4a63}
+.c-iss{background:#1f5fa8}.c-icms{background:#1f5fa8}.c-cbs{background:#2e7d4f}.c-ibs{background:#6a3fa0}
+.legend{display:flex;flex-wrap:wrap;gap:3mm;font-size:8.8pt;margin-top:1mm}
+.legend i{display:inline-block;width:3.5mm;height:3.5mm;border-radius:.8mm;vertical-align:-.5mm;margin-right:1mm}
+/* flow */
+.flow{display:flex;align-items:stretch;gap:2mm;margin:3mm 0;break-inside:avoid}
+.flow>div{flex:1;border:1px solid var(--line);border-radius:2mm;padding:2.5mm;background:var(--soft);font-size:9.5pt}
+.flow .arrow{flex:0 0 6mm;border:0;background:none;display:flex;align-items:center;justify-content:center;font-size:16pt;color:var(--blue);padding:0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:3mm;break-inside:avoid}
+.two>div{border:1px solid var(--line);border-radius:2mm;padding:3mm}
+.two .hd{font-weight:700;font-size:11pt;margin-bottom:2mm}
+.cred{display:flex;align-items:flex-end;gap:8mm;margin:3mm 0 1mm 4mm;break-inside:avoid}
+.cred .col{width:36mm;text-align:center;font-size:9pt}
+.cred .col .v{background:var(--green);color:#fff;font-weight:700;display:flex;align-items:flex-start;justify-content:center;padding-top:1mm;border-radius:1.5mm 1.5mm 0 0}
+.check li{list-style:none;margin-left:-5mm}
+.check li::before{content:"☐ ";font-weight:700;color:var(--blue)}
+.foot{font-size:8.5pt;color:var(--muted);border-top:1px solid var(--line);padding-top:2mm;margin-top:5mm}
+.tree{font-size:9.6pt;break-inside:avoid}
+.tree .q{background:var(--blue);color:#fff;border-radius:2mm;padding:2mm 3mm;font-weight:700;text-align:center;margin:0 auto 2mm;max-width:120mm}
+.tree .opts{display:grid;grid-template-columns:1fr 1fr;gap:3mm}
+@media print{body{font-size:10.5pt}.page{padding:0;max-width:none}}
+@page{size:A4;margin:14mm 12mm 14mm 12mm}
+</style>
+</head>
+<body>
+
+<!-- CAPA -->
+<section class="page cover">
+  <div class="band">
+    <h1>Reforma Tributária na prática</h1>
+    <p>IBS e CBS no DAS do Simples Nacional, o ISS dos prestadores de serviço e o que muda a partir do fechamento de outubro/2026</p>
+  </div>
+  <div style="margin-top:10mm">
+    <p><b>Guia de consulta rápida do escritório</b> · Mauriceia Lima – Assessoria Contábil e Empresarial · São Paulo/SP</p>
+    <p class="muted">Situação das normas em 06/11/2026. Base legal: EC 132/2023, LC 214/2025, LC 227/2026, LC 123/2006 e Resoluções CGSN 186, 190, 191 e 194/2026.</p>
+    <h3>Sumário</h3>
+    <ol class="toc">
+      <li>Resumo em 1 página: o que você precisa saber hoje</li>
+      <li>Fechamento de outubro/2026: o que tem de novo</li>
+      <li>Linha do tempo 2026 a 2033</li>
+      <li>Como o IBS e a CBS entram no DAS (Simples Nacional "puro")</li>
+      <li>DAS ou regime regular (híbrido)? O efeito do crédito no seu cliente</li>
+      <li>Prestadores de serviço e o ISS: Simples e Lucro Presumido, com exemplos</li>
+      <li>Checklists do escritório e roteiro de conversa com o cliente</li>
+      <li>Glossário e base legal</li>
+    </ol>
+    <div class="box o"><b class="t">Aviso de responsabilidade técnica</b>Os números dos exemplos são <b>ilustrativos</b>, servem para entender o mecanismo. A regulamentação ainda sai em etapas (Atos Conjuntos RFB/CGIBS, Resoluções CGSN, Notas Técnicas). Antes de orientar um cliente, confira a norma vigente no Portal do Simples Nacional, na Receita Federal ou no portal do Comitê Gestor do IBS.</div>
+  </div>
+</section>
+
+<!-- 1. RESUMO -->
+<section class="page">
+  <span class="chap">CAPÍTULO 1</span>
+  <h2>Resumo em 1 página</h2>
+  <div class="box g"><b class="t">1. O DAS de outubro/2026 (vence em 20/11/2026) é calculado do mesmo jeito de sempre.</b>Em 2026 o Simples Nacional ficou fora da fase de teste de IBS/CBS (LC 214/2025, art. 348). As regras de IBS/CBS para optantes valem a partir de <b>01/01/2027</b>.</div>
+  <div class="box"><b class="t">2. A grande mudança operacional já começou: NFS-e Nacional.</b>Desde <b>01/11/2026</b>, ME e EPP do Simples que prestam serviço emitem a NFS-e pelo padrão nacional (Res. CGSN 191/2026). Isso pesa nas notas de <b>novembro</b>, não nas de outubro.</div>
+  <div class="box r"><b class="t">3. Prazo de escolha encerrado e prazo de arrependimento aberto.</b>A opção para recolher IBS/CBS <b>fora do DAS</b> (regime regular) no 1º semestre de 2027 terminou em <b>30/10/2026</b> (Res. CGSN 186/2026, prorrogada pela Res. CGSN 194/2026). Quem optou pode <b>cancelar de 03/11 a 20/12/2026</b>, e esse cancelamento não pode ser desfeito.</div>
+  <div class="box o"><b class="t">4. Em 2027, a CBS substitui PIS e Cofins.</b>Dentro do DAS, a fatia que hoje é de PIS e Cofins passa a ser de CBS. <b>A alíquota total da tabela do Simples não muda por causa disso.</b> Para quem está fora do Simples, a CBS de 2027 pode ficar em torno de 11,2%: o TCU calculou a alíquota de referência em 11,3% em 28/10/2026, e o Senado ainda precisa fixá-la.</div>
+  <div class="box p"><b class="t">5. O ISS continua até 2028, depois diminui de 2029 a 2032 e acaba em 2033.</b>No lugar dele entra o IBS. O prestador do Simples continua pagando o ISS dentro do DAS durante a transição. O que muda é a divisão interna da guia.</div>
+  <h3>A frase para levar ao cliente</h3>
+  <p style="font-size:12pt;border:2px dashed var(--blue);padding:3mm;border-radius:2mm">"Para quem fica no Simples com tudo dentro do DAS, a guia continua parecida. O que muda é a nota fiscal, e o fato de que o seu cliente empresa vai olhar quanto crédito você gera para ele. É isso que precisamos analisar juntos."</p>
+  <div class="foot">Fontes: LC 214/2025 art. 348; Res. CGSN 186, 191 e 194/2026; Senado Notícias, 28/10/2026 (TCU, CBS 11,3%).</div>
+</section>
+
+<!-- 2. OUTUBRO -->
+<section class="page">
+  <span class="chap">CAPÍTULO 2</span>
+  <h2>Fechamento de outubro/2026: o que tem de novo</h2>
+  <table>
+    <tr><th style="width:30%">Regime do cliente</th><th>O que muda no fechamento de 10/2026</th><th style="width:22%">Ação</th></tr>
+    <tr><td><b>MEI</b></td><td>Nada no DAS-MEI, que continua com valor fixo. A NFS-e de serviço já era emitida pelo padrão nacional.</td><td>Rotina normal.</td></tr>
+    <tr><td><b>ME/EPP Simples (tudo no DAS)</b></td><td>PGDAS-D e DAS iguais (PA 10/2026, vencimento 20/11/2026). <b>Não há IBS/CBS no DAS em 2026.</b></td><td>Rotina normal. Conferir o emissor de NFS-e para novembro.</td></tr>
+    <tr><td><b>ME/EPP Simples que optou pelo regime regular para 2027</b></td><td>Nada muda em outubro. A opção só vale a partir de 01/01/2027.</td><td>Revisar a opção até <b>20/12/2026</b> (janela de cancelamento).</td></tr>
+    <tr><td><b>Lucro Presumido / Real</b></td><td>PIS, Cofins, ICMS e ISS normais. Nas notas, IBS de 0,1% e CBS de 0,9% aparecem só como destaque de teste, sem recolhimento efetivo para quem cumpre as obrigações acessórias (LC 214, art. 348, §1º).</td><td>Conferir se as notas saíram com os campos de IBS/CBS e com o cClassTrib correto.</td></tr>
+  </table>
+  <h3>Novidades de outubro e novembro/2026 que você precisa saber</h3>
+  <ul>
+    <li><b>28/10/2026:</b> o TCU calculou a alíquota de referência da CBS para 2027 em <b>11,3%</b>, acima dos 8,8% estimados antes pela Fazenda. O Senado fixa o valor por resolução até dezembro. Em 2027 e 2028 a CBS é cobrada com 0,1 ponto a menos, o que dá cerca de <b>11,2%</b>, e o IBS fica em 0,1% (0,05% estadual e 0,05% municipal).</li>
+    <li><b>30/10/2026:</b> terminou a janela para o Simples optar pelo regime regular de IBS/CBS no 1º semestre de 2027 (Res. CGSN 194/2026).</li>
+    <li><b>01/11/2026:</b> NFS-e Nacional obrigatória para ME/EPP do Simples (Res. CGSN 191/2026). Segundo a Receita, a troca de emissor <b>não antecipa</b> IBS/CBS para o Simples.</li>
+    <li><b>03/11 a 20/12/2026:</b> janela para cancelar as opções feitas para 2027, de forma irretratável.</li>
+    <li><b>Sublimite:</b> o sublimite estadual/municipal de R$ 3,6 milhões passa a valer também para o IBS, além de ICMS e ISS (Res. CGSN 190, 191 e 194/2026, conforme análises publicadas). Atenção aos clientes perto desse valor.</li>
+  </ul>
+  <div class="box o"><b class="t">Ponto de atenção: município de São Paulo</b>A capital tem sistema próprio de nota (NFS-e/NF Paulistana) e as regras de convênio com o Ambiente Nacional podem mudar. Para clientes de outros municípios, confirme no site da prefeitura se ela usa o Emissor Nacional ou um emissor próprio integrado ao ADN (Ambiente de Dados Nacional).</div>
+  <div class="foot">Fontes: Receita Federal, notícia de ago/2026 sobre a NFS-e Nacional no Simples; CRCSP, notícia sobre a Res. CGSN 194/2026; Senado Notícias, 28/10/2026.</div>
+</section>
+
+<!-- 3. LINHA DO TEMPO -->
+<section class="page">
+  <span class="chap">CAPÍTULO 3</span>
+  <h2>Linha do tempo 2026 a 2033</h2>
+  <div class="tl">
+    <div class="y26 now"><b>2026</b>Ano de teste. Regime regular: CBS 0,9% e IBS 0,1% só destacados na nota. <b>Simples: fora do teste.</b><br><i>Você está aqui.</i></div>
+    <div class="y27"><b>2027</b>CBS cheia (~11,2%). <b>PIS e Cofins acabam.</b> Começa o Imposto Seletivo. IPI zerado (exceto ZFM). <b>Simples: CBS entra no DAS.</b></div>
+    <div class="y27"><b>2028</b>Igual a 2027. IBS ainda em teste (0,1%). ICMS e ISS inteiros.</div>
+    <div class="y29"><b>2029–2032</b>ICMS e ISS caem para 90%, 80%, 70% e 60% e o IBS sobe na mesma proporção.</div>
+    <div class="y33"><b>2033</b>ICMS e ISS extintos. Sistema novo completo: IBS + CBS + IS.</div>
+  </div>
+  <h3>Como o ISS dá lugar ao IBS (proporção da alíquota antiga que ainda vale)</h3>
+  <table>
+    <tr><th>Ano</th><th class="n">ISS / ICMS</th><th class="n">IBS (parte que entra)</th><th>Leitura simples</th></tr>
+    <tr><td>2026 a 2028</td><td class="n">100%</td><td class="n">teste (0,1%)</td><td>ISS igual a hoje</td></tr>
+    <tr><td>2029</td><td class="n">90%</td><td class="n">≈ 10%</td><td>O ISS perde 1/10</td></tr>
+    <tr><td>2030</td><td class="n">80%</td><td class="n">≈ 20%</td><td>O ISS perde 2/10</td></tr>
+    <tr><td>2031</td><td class="n">70%</td><td class="n">≈ 30%</td><td>O ISS perde 3/10</td></tr>
+    <tr><td>2032</td><td class="n">60%</td><td class="n">≈ 40%</td><td>O ISS perde 4/10</td></tr>
+    <tr><td>2033</td><td class="n">0%</td><td class="n">100%</td><td>Só IBS</td></tr>
+  </table>
+  <div class="box"><b class="t">Por que isso importa para o escritório</b>De 2027 a 2032 o cliente convive com <b>dois sistemas ao mesmo tempo</b>: o antigo (ICMS/ISS) e o novo (IBS/CBS). É nesse período que o cliente mais precisa de orientação. Isso também justifica revisar o contrato de honorários.</div>
+  <div class="foot">Base: EC 132/2023 (ADCT, arts. 125 a 133) e LC 214/2025 (disposições transitórias).</div>
+</section>
+
+<!-- 4. DAS -->
+<section class="page">
+  <span class="chap">CAPÍTULO 4</span>
+  <h2>Como o IBS e a CBS entram no DAS (Simples "puro")</h2>
+  <p><b>A ideia central:</b> o DAS continua sendo <b>uma guia só</b>, com a alíquota efetiva calculada pela mesma tabela (RBT12, anexo e faixa). O que muda é <b>para quem vai cada pedaço</b> da guia, a chamada partilha.</p>
+  <div class="flow">
+    <div><b>Hoje</b><br>PIS + Cofins + ISS (ou ICMS) + IRPJ + CSLL + CPP</div><div class="arrow">➜</div>
+    <div><b>2027–2028</b><br>PIS + Cofins viram <b style="color:var(--green)">CBS</b>. O resto continua igual.</div><div class="arrow">➜</div>
+    <div><b>2029–2032</b><br>Parte do ISS/ICMS vira <b style="color:var(--purple)">IBS</b>, aumentando a cada ano.</div><div class="arrow">➜</div>
+    <div><b>2033</b><br>ISS/ICMS deixam de existir. Ficam <b>CBS + IBS</b> + IRPJ + CSLL + CPP.</div>
+  </div>
+
+  <h3>Exemplo 1: prestador de serviço, Anexo III, 1ª faixa</h3>
+  <p>Faturamento do mês R$ 20.000 · RBT12 R$ 180.000 · alíquota de 6% · <b>DAS = R$ 1.200,00</b></p>
+  <div class="bars">
+    <div class="bar-row"><div class="lab">2026</div><div class="bar">
+      <span class="c-ir" style="width:4%"></span><span class="c-cs" style="width:3.5%"></span>
+      <span class="c-pc" style="width:15.6%">PIS+Cofins<br>187,20</span><span class="c-cpp" style="width:43.4%">CPP 520,80</span><span class="c-iss" style="width:33.5%">ISS 402,00</span></div></div>
+    <div class="bar-row"><div class="lab">2027–28</div><div class="bar">
+      <span class="c-ir" style="width:4%"></span><span class="c-cs" style="width:3.5%"></span>
+      <span class="c-cbs" style="width:15.6%">CBS<br>187,20</span><span class="c-cpp" style="width:43.4%">CPP 520,80</span><span class="c-iss" style="width:33.5%">ISS 402,00</span></div></div>
+    <div class="bar-row"><div class="lab">2029*</div><div class="bar">
+      <span class="c-ir" style="width:4%"></span><span class="c-cs" style="width:3.5%"></span>
+      <span class="c-cbs" style="width:15.6%">CBS<br>187,20</span><span class="c-cpp" style="width:43.4%">CPP 520,80</span><span class="c-iss" style="width:30.15%">ISS 361,80</span><span class="c-ibs" style="width:3.35%"></span></div></div>
+    <div class="bar-row"><div class="lab">2033*</div><div class="bar">
+      <span class="c-ir" style="width:4%"></span><span class="c-cs" style="width:3.5%"></span>
+      <span class="c-cbs" style="width:15.6%">CBS<br>187,20</span><span class="c-cpp" style="width:43.4%">CPP 520,80</span><span class="c-ibs" style="width:33.5%">IBS 402,00</span></div></div>
+    <div class="legend"><span><i class="c-ir"></i>IRPJ 48,00</span><span><i class="c-cs"></i>CSLL 42,00</span><span><i class="c-pc"></i>PIS/Cofins</span><span><i class="c-cbs"></i>CBS</span><span><i class="c-cpp"></i>CPP (INSS patronal)</span><span><i class="c-iss"></i>ISS</span><span><i class="c-ibs"></i>IBS (2029: 40,20)</span></div>
+  </div>
+  <table>
+    <tr><th>Tributo</th><th class="n">Partilha</th><th class="n">2026</th><th class="n">2027–2028</th><th class="n">2029*</th><th class="n">2033*</th></tr>
+    <tr><td>IRPJ</td><td class="n">4,00%</td><td class="n">48,00</td><td class="n">48,00</td><td class="n">48,00</td><td class="n">48,00</td></tr>
+    <tr><td>CSLL</td><td class="n">3,50%</td><td class="n">42,00</td><td class="n">42,00</td><td class="n">42,00</td><td class="n">42,00</td></tr>
+    <tr><td>Cofins + PIS → CBS</td><td class="n">15,60%</td><td class="n">187,20</td><td class="n">187,20 (CBS)</td><td class="n">187,20</td><td class="n">187,20</td></tr>
+    <tr><td>CPP</td><td class="n">43,40%</td><td class="n">520,80</td><td class="n">520,80</td><td class="n">520,80</td><td class="n">520,80</td></tr>
+    <tr><td>ISS</td><td class="n">33,50%</td><td class="n">402,00</td><td class="n">402,00</td><td class="n">361,80</td><td class="n">–</td></tr>
+    <tr><td>IBS</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="n">40,20</td><td class="n">402,00</td></tr>
+    <tr class="tot"><td>Total do DAS</td><td class="n">100%</td><td class="n">1.200,00</td><td class="n">1.200,00</td><td class="n">1.200,00</td><td class="n">1.200,00</td></tr>
+  </table>
+  <p class="muted" style="font-size:9pt">Partilha da 1ª faixa do Anexo III (LC 123/2006). *2029 e 2033: projeção didática pela proporção da transição. A partilha oficial de cada ano será a dos anexos alterados pela LC 214/2025 e LC 227/2026 e pelas Resoluções CGSN. Confira antes de usar com cliente.</p>
+</section>
+
+<section class="page">
+  <h3>Exemplo 2: comércio, Anexo I, 1ª faixa</h3>
+  <p>Vendas do mês R$ 20.000 · alíquota de 4% · <b>DAS = R$ 800,00</b></p>
+  <table>
+    <tr><th>Tributo</th><th class="n">Partilha</th><th class="n">2026</th><th class="n">2027–2028</th><th class="n">2033*</th></tr>
+    <tr><td>IRPJ</td><td class="n">5,50%</td><td class="n">44,00</td><td class="n">44,00</td><td class="n">44,00</td></tr>
+    <tr><td>CSLL</td><td class="n">3,50%</td><td class="n">28,00</td><td class="n">28,00</td><td class="n">28,00</td></tr>
+    <tr><td>Cofins + PIS → CBS</td><td class="n">15,50%</td><td class="n">124,00</td><td class="n">124,00 (CBS)</td><td class="n">124,00</td></tr>
+    <tr><td>CPP</td><td class="n">41,50%</td><td class="n">332,00</td><td class="n">332,00</td><td class="n">332,00</td></tr>
+    <tr><td>ICMS → IBS</td><td class="n">34,00%</td><td class="n">272,00 (ICMS)</td><td class="n">272,00 (ICMS)</td><td class="n">272,00 (IBS)</td></tr>
+    <tr class="tot"><td>Total</td><td class="n">100%</td><td class="n">800,00</td><td class="n">800,00</td><td class="n">800,00</td></tr>
+  </table>
+  <div class="box g"><b class="t">Conclusão para o Simples "puro"</b>
+    <ul>
+      <li>O <b>valor total</b> do DAS segue a mesma tabela. A reforma não aumenta, por si só, a guia de quem fica 100% no DAS.</li>
+      <li>Muda o <b>nome</b> de quem recebe: PIS/Cofins viram CBS em 2027, e ISS/ICMS viram IBS aos poucos até 2033.</li>
+      <li>Muda a <b>nota fiscal</b>: a partir de 2027 o optante informa IBS/CBS nos documentos fiscais, com os códigos de classificação tributária (CST e cClassTrib).</li>
+      <li>Continua valendo: RBT12, Fator R (Anexo III x V), sublimite de R$ 3,6 milhões (agora também para o IBS) e o limite de R$ 4,8 milhões.</li>
+    </ul></div>
+</section>
+
+<!-- 5. DAS x HÍBRIDO -->
+<section class="page">
+  <span class="chap">CAPÍTULO 5</span>
+  <h2>DAS ou regime regular (híbrido)? O efeito do crédito</h2>
+  <div class="two">
+    <div><div class="hd" style="color:var(--blue)">Opção A: tudo no DAS</div>
+      <ul><li>Uma guia só, rotina como hoje.</li><li>Quem compra de você (empresa do regime regular) só aproveita como crédito <b>o pedaço de CBS/IBS que você pagou no DAS</b>, que é pequeno.</li><li>Bom para quem vende a <b>consumidor final</b> ou a outro optante do Simples.</li></ul></div>
+    <div><div class="hd" style="color:var(--green)">Opção B: IBS/CBS fora do DAS</div>
+      <ul><li>O DAS fica sem a parte de IBS/CBS, que passa a ser apurada como numa empresa normal, com débitos e créditos.</li><li>O cliente empresa aproveita o <b>crédito cheio</b>.</li><li>Os valores de IBS/CBS pagos por fora <b>não entram na receita bruta</b> do Simples.</li><li>Mais trabalho para o escritório, e pode aumentar o imposto se a empresa tiver poucas compras com crédito.</li></ul></div>
+  </div>
+  <h3>Desenho: crédito que o comprador aproveita numa compra de R$ 10.000 (CBS, 2027)</h3>
+  <div class="cred">
+    <div class="col"><div class="v" style="height:4mm;background:var(--orange)"></div>R$ 93,60<br><b>Fornecedor no DAS</b><br><small>15,6% × 6% = 0,936%</small></div>
+    <div class="col"><div class="v" style="height:38mm">R$ 1.120</div>R$ 1.120,00<br><b>Fornecedor no regime regular</b><br><small>CBS ≈ 11,2% (projeção)</small></div>
+  </div>
+  <p class="muted" style="font-size:9pt">Exemplo com prestador do Anexo III, 1ª faixa. A CBS de 11,2% é projeção a partir do cálculo do TCU (11,3% − 0,1 ponto) e depende da resolução do Senado.</p>
+  <div class="tree">
+    <div class="q">O cliente vende principalmente para quem?</div>
+    <div class="opts">
+      <div class="box g" style="margin:0"><b class="t">Pessoa física / consumidor final ou outros optantes do Simples</b>→ Em regra, <b>ficar no DAS</b>. Crédito não faz diferença para esse comprador.</div>
+      <div class="box o" style="margin:0"><b class="t">Empresas do Lucro Presumido ou Real</b>→ <b>Simular as duas opções.</b> Se o comprador pressionar por crédito, o regime regular pode manter o cliente competitivo. Compare a carga com a margem.</div>
+    </div>
+  </div>
+  <div class="box r"><b class="t">Prazos (confirmar sempre)</b>1º semestre/2027: opção encerrada em 30/10/2026 · cancelamento de 03/11 a 20/12/2026 (Res. CGSN 194/2026). A opção é <b>semestral</b>. A janela para o 2º semestre de 2027 será no 1º semestre de 2027, com data a confirmar na resolução vigente.</div>
+</section>
+
+<!-- 6. ISS -->
+<section class="page">
+  <span class="chap">CAPÍTULO 6</span>
+  <h2>Prestadores de serviço e o ISS</h2>
+  <h3>6.1 Prestador no Simples Nacional</h3>
+  <ul>
+    <li><b>2026 a 2028:</b> o ISS continua <b>dentro do DAS</b>, igual a hoje: mesma partilha, mesma retenção pelo tomador quando a lei municipal exigir (LC 116/2003) e mesma regra do Fator R.</li>
+    <li><b>2029 a 2032:</b> a parte de ISS do DAS diminui e a de IBS aumenta (ver Exemplo 1). O total da guia segue a tabela.</li>
+    <li><b>2033:</b> acaba o ISS e entra só o IBS. A retenção de ISS deixa de existir, e no lugar dela entram o split payment e o crédito.</li>
+    <li><b>Já agora:</b> NFS-e Nacional obrigatória desde 01/11/2026 e, a partir de 2027, campos de IBS/CBS preenchidos na nota.</li>
+  </ul>
+  <h3>6.2 Prestador no Lucro Presumido: aqui a mudança pesa mais</h3>
+  <p>Exemplo: consultoria em São Paulo, faturamento de R$ 10.000/mês, ISS de 5% (ilustrativo; confirme a alíquota do item da lista), compras mensais com crédito de R$ 3.000 (aluguel, software, energia, serviços de empresas).</p>
+  <table>
+    <tr><th>Tributo sobre o faturamento</th><th class="n">2026 (hoje)</th><th class="n">2027 (projeção)</th></tr>
+    <tr><td>PIS 0,65% + Cofins 3% (cumulativo)</td><td class="n">365,00</td><td class="n">extintos</td></tr>
+    <tr><td>CBS de cerca de 11,2% sobre R$ 10.000 ("por fora")</td><td class="n">teste 0,9% (não pago)</td><td class="n">1.120,00</td></tr>
+    <tr><td>(−) Crédito de CBS das compras (R$ 3.000 × 11,2%)</td><td class="n">–</td><td class="n">(336,00)</td></tr>
+    <tr><td>ISS 5%</td><td class="n">500,00</td><td class="n">500,00</td></tr>
+    <tr class="tot"><td>Total sobre consumo</td><td class="n">865,00</td><td class="n">1.284,00</td></tr>
+  </table>
+  <div class="box o"><b class="t">Como ler esse exemplo</b>
+    <ul>
+      <li>A CBS é calculada <b>"por fora"</b>, ou seja, somada ao preço. Se o cliente conseguir repassar, o impacto sobre a margem diminui. Se o tomador for empresa do regime regular, ele toma o crédito.</li>
+      <li><b>Profissões intelectuais regulamentadas</b> (contador, advogado, engenheiro etc.) têm <b>redução de 30%</b> na alíquota (LC 214/2025, art. 127). Saúde e educação, em regra, têm redução de 60%. Confira o enquadramento pelo cClassTrib.</li>
+      <li>IRPJ e CSLL do Presumido não mudam com a reforma do consumo.</li>
+      <li>Serviço com <b>poucos insumos</b> e cliente <b>pessoa física</b> é o perfil mais afetado. Vale <b>simular o Simples</b> (Anexo III ou V e Fator R) para 2027.</li>
+    </ul></div>
+  <h3 style="break-before:page">6.3 ISS x IBS: o que muda na lógica</h3>
+  <table>
+    <tr><th></th><th>ISS (até 2032)</th><th>IBS (a partir de 2029, pleno em 2033)</th></tr>
+    <tr><td>Quem cobra</td><td>Município, em regra o do prestador</td><td>Estado + município <b>do destino</b> (onde está o tomador ou o consumo)</td></tr>
+    <tr><td>Crédito</td><td>Não tem (cumulativo)</td><td>Tem, não cumulativo e amplo</td></tr>
+    <tr><td>Retenção</td><td>Pelo tomador, conforme lei municipal</td><td>Split payment (separação automática no pagamento)</td></tr>
+    <tr><td>Base</td><td>Preço do serviço</td><td>"Por fora" (não incide sobre ele mesmo)</td></tr>
+  </table>
+  <div class="box"><b class="t">MEI prestador</b>Continua no SIMEI com valor fixo mensal. O efeito indireto é que empresas do regime regular que contratam MEI terão crédito pequeno ou nenhum. Isso pode pesar na escolha do fornecedor.</div>
+</section>
+
+<!-- 7. CHECKLISTS -->
+<section class="page">
+  <span class="chap">CAPÍTULO 7</span>
+  <h2>Checklists do escritório</h2>
+  <h3>Fechamento de outubro/2026 (entregar até 20/11)</h3>
+  <ul class="check">
+    <li>PGDAS-D do PA 10/2026 transmitido e DAS emitido, sem nenhuma parcela de IBS/CBS.</li>
+    <li>Clientes do Presumido/Real: notas de outubro com os campos de IBS/CBS (teste) e cClassTrib preenchidos.</li>
+    <li>Prestadores do Simples: credenciados no emissor de NFS-e correto para as notas de novembro.</li>
+    <li>Lista dos clientes que optaram pelo regime regular para 2027, com decisão confirmada ou cancelada <b>até 20/12/2026</b>.</li>
+    <li>Clientes com RBT12 perto de R$ 3,6 milhões: revisar o sublimite, que agora inclui o IBS.</li>
+  </ul>
+  <h3>Preparação para janeiro/2027</h3>
+  <ul class="check">
+    <li>Sistemas de emissão (NF-e, NFC-e, NFS-e) atualizados com as Notas Técnicas de 2027.</li>
+    <li>Cadastro de produtos e serviços com NCM/NBS, CST e cClassTrib.</li>
+    <li>Conferir a alíquota da CBS publicada pelo Senado (prevista até dezembro/2026).</li>
+    <li>Simulação Simples x Presumido para os prestadores com margem apertada.</li>
+    <li>Carta-circular aos clientes explicando o que muda (modelo em ESCRITORIO/MODELOS).</li>
+    <li>Revisão dos honorários, já que o escritório passa a cuidar de dois sistemas de 2027 a 2032.</li>
+  </ul>
+  <h3>Roteiro de conversa com o cliente (5 perguntas)</h3>
+  <ol>
+    <li>Você vende mais para pessoa física ou para empresas?</li>
+    <li>Seus clientes empresa são do Simples ou do Lucro Presumido/Real?</li>
+    <li>Algum cliente já perguntou sobre "crédito de IBS/CBS" na sua nota?</li>
+    <li>Quais são suas maiores despesas? Elas geram crédito (aluguel PJ, energia, insumos, software)?</li>
+    <li>Você consegue reajustar o preço se o imposto vier destacado na nota?</li>
+  </ol>
+</section>
+
+<!-- 8. GLOSSÁRIO -->
+<section class="page">
+  <span class="chap">CAPÍTULO 8</span>
+  <h2>Glossário e base legal</h2>
+  <table>
+    <tr><th style="width:26%">Termo</th><th>Em palavras simples</th></tr>
+    <tr><td><b>CBS</b></td><td>Contribuição sobre Bens e Serviços, federal. Substitui PIS, Cofins e IPI.</td></tr>
+    <tr><td><b>IBS</b></td><td>Imposto sobre Bens e Serviços, de estados e municípios. Substitui ICMS e ISS. É administrado pelo Comitê Gestor (CGIBS).</td></tr>
+    <tr><td><b>IS</b></td><td>Imposto Seletivo, sobre produtos que fazem mal à saúde ou ao meio ambiente (cigarro, bebida alcoólica etc.).</td></tr>
+    <tr><td><b>Não cumulativo / crédito</b></td><td>O imposto pago na compra é descontado do imposto devido na venda.</td></tr>
+    <tr><td><b>"Por fora"</b></td><td>O imposto não entra na própria base de cálculo e é somado ao preço.</td></tr>
+    <tr><td><b>Split payment</b></td><td>No pagamento (cartão, Pix, boleto), o banco separa automaticamente o imposto e o envia ao governo.</td></tr>
+    <tr><td><b>Destino</b></td><td>O imposto fica com o estado ou município onde está o comprador ou o consumo, e não onde está o vendedor.</td></tr>
+    <tr><td><b>Regime híbrido / regular no Simples</b></td><td>O optante fica no Simples para os demais tributos e paga IBS/CBS por fora do DAS, com débito e crédito.</td></tr>
+    <tr><td><b>cClassTrib</b></td><td>Código de classificação tributária de IBS/CBS informado em cada item da nota (indica alíquota cheia, reduzida, isenção etc.).</td></tr>
+    <tr><td><b>Partilha</b></td><td>A divisão interna da alíquota do DAS entre os tributos.</td></tr>
+  </table>
+  <h3>Base legal</h3>
+  <ul>
+    <li><b>EC 132/2023</b>: cria IBS, CBS e IS e define a transição (ADCT).</li>
+    <li><b>LC 214/2025</b>: regulamenta IBS, CBS e IS. Art. 348 trata do ano de teste de 2026. Art. 127 trata da redução de 30% para profissões intelectuais. Altera a LC 123/2006 para o Simples.</li>
+    <li><b>LC 227/2026</b>: Comitê Gestor do IBS, processo administrativo do IBS e ajustes na LC 214.</li>
+    <li><b>LC 123/2006</b>: Simples Nacional (anexos e partilha).</li>
+    <li><b>LC 116/2003</b>: ISS, vigente até 2032.</li>
+    <li><b>Res. CGSN 186/2026</b>: prazos de opção para 2027 (regime regular de IBS/CBS). <b>Res. CGSN 194/2026</b>: prorroga a opção até 30/10/2026 e fixa o cancelamento de 03/11 a 20/12/2026. <b>Res. CGSN 191/2026</b>: NFS-e Nacional para ME/EPP a partir de 01/11/2026. <b>Res. CGSN 190/2026</b>: ajustes do Simples à reforma.</li>
+  </ul>
+  <h3>Onde conferir atualizações</h3>
+  <ul>
+    <li>Portal do Simples Nacional (resoluções CGSN) · Receita Federal (notícias e Notas Técnicas) · Portal do Comitê Gestor do IBS · Portal NFS-e Nacional (nfse.gov.br) · CRCSP (notícias técnicas).</li>
+  </ul>
+  <div class="foot">Guia elaborado em 06/11/2026 com base nas normas e notícias oficiais disponíveis nessa data. Exemplos numéricos ilustrativos. Conteúdo sujeito a novos atos normativos: revise antes de cada decisão de cliente.</div>
+</section>
+</body>
+</html>

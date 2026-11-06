@@ -13,3 +13,7 @@ Resumo simples do cronograma. **Conferir sempre as atualizações e regulamenta�
 - Simples Nacional continua existindo, mas a escolha "dentro ou fora do DAS" para IBS/CBS pode mudar a competitividade de quem vende para empresas.
 - MEI continua com regime próprio.
 - Revisar cadastros e emissão de notas (NF-e, NFC-e, NFS-e) para os novos campos.
+
+## E-book de consulta (imprimível)
+- `EBOOK/ebook-reforma-simples-iss.pdf`: guia de 11 páginas (situação em 06/11/2026) sobre o fechamento de outubro/2026, IBS/CBS dentro do DAS, DAS x regime regular, ISS dos prestadores, checklists e base legal.
+- `EBOOK/ebook-reforma-simples-iss.html`: arquivo-fonte, para atualizar quando sair norma nova.
